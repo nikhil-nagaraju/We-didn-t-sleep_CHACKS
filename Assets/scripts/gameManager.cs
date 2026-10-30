@@ -1,37 +1,21 @@
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/// Persistent singleton: HP, inventory, checkpoints, defeated enemies, save/load.
-public class GameManager : MonoBehaviour
+public class gameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-    public static string NextEnemyName = "Unknown Enemy";
-
-    public const string OverworldScene = "Overworld";
-    public const string BattleScene = "BattleScene";
-
-    public int playerHP = 20;
-    public int maxHP = 20;
-    public int teaCount = 2;
-
-    public bool hasCheckpoint;
-    public Vector2 checkpointPos;
-    public bool hasReturnPos;
-    public Vector2 returnPos;
-    public bool cutscenePlayed;
-    public HashSet<string> defeated = new HashSet<string>();
-
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    static void Boot()
+    public TMP_Text label;
+    public TMP_Text tocollect;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        if (Instance == null)
-            new GameObject("GameManager").AddComponent<GameManager>();
+        StaticClasses.timeLeft = 120;
+        StaticClasses.toCollect = 3;
     }
 
-    void Awake()
+    // Update is called once per frame
+    void Update()
     {
-
         //updating label:
         
         if (StaticClasses.timeLeft <= 0f) blackout();
@@ -51,8 +35,5 @@ public class GameManager : MonoBehaviour
     {
         // Debug.Log("Congratulations! Power is back")
         SceneManager.LoadSceneAsync("Congratulations");
-
-      
     }
-
 }
