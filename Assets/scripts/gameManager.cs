@@ -10,7 +10,7 @@ public class gameManager : MonoBehaviour
     void Start()
     {
         StaticClasses.timeLeft = 120;
-        StaticClasses.toCollect = 2;
+        StaticClasses.toCollect = 3;
     }
 
     // Update is called once per frame
