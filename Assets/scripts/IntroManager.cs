@@ -13,6 +13,11 @@ public class IntroManager : MonoBehaviour
 
     private int pressCount = 0;
 
+    void Start()
+    {
+        introText.text = texts[pressCount];
+        introImage.sprite = images[pressCount];
+    }
     public void OnNextButtonPressed()
     {
         pressCount++;

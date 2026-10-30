@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -409.35, y: -134}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &154493835
@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 154493836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2077346470}
+        m_TargetAssemblyTypeName: IntroManager, Assembly-CSharp
+        m_MethodName: OnSkipButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &154493836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,7 +747,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 3.563798}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -783,8 +795,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: 600, y: 350}
+  m_AnchoredPosition: {x: 32.516, y: 136.65294}
+  m_SizeDelta: {x: 1043.734, y: 613.886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418529131
 MonoBehaviour:
@@ -860,7 +872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 455, y: -134}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1939796506
@@ -906,7 +918,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1939796507}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2077346470}
+        m_TargetAssemblyTypeName: IntroManager, Assembly-CSharp
+        m_MethodName: OnNextButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1939796507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,8 +1003,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 220}
-  m_SizeDelta: {x: 800, y: 180}
+  m_AnchoredPosition: {x: 0, y: -342.23}
+  m_SizeDelta: {x: 800, y: 289.985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1988494621
 MonoBehaviour:
@@ -1093,6 +1117,7 @@ GameObject:
   - component: {fileID: 2077346469}
   - component: {fileID: 2077346468}
   - component: {fileID: 2077346467}
+  - component: {fileID: 2077346470}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1161,6 +1186,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2077346470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077346466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc5020ad22bde64ca7c60b3c0562ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IntroManager
+  introText: {fileID: 1988494621}
+  introImage: {fileID: 1418529131}
+  texts:
+  - The city used to be bustling and lively, with lots of available power
+  - Then, disaster struck. We ran out of non-renewable resources
+  - You have 2 minutes to activate all available renewable power sources, otherwise, there will be an infinite blackout
+  - Renewable resources are all we have left. Jump onto the red pads to activate them
+  images:
+  - {fileID: 21300000, guid: 9a6cb85970f506343a0c5837c1a1bbd7, type: 3}
+  - {fileID: 21300000, guid: ee5fb49783ac59c46b2e2091e26946da, type: 3}
+  - {fileID: 21300000, guid: 7ee95b9da5e9f344ba6aed4258d12579, type: 3}
+  - {fileID: 21300000, guid: 06fa5dfb3b13edd458e3f811dfa129fd, type: 3}
 --- !u!1 &2084842711
 GameObject:
   m_ObjectHideFlags: 0
