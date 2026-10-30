@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class gameManager : MonoBehaviour
         //updating label:
         
         if (StaticClasses.timeLeft <= 0f) blackout();
+        if(StaticClasses.toCollect <= 0f) congrats();
         StaticClasses.timeLeft -= Time.deltaTime;
         label.text = $"Time remaining: {(int)((int)StaticClasses.timeLeft / 60)}:{(int)StaticClasses.timeLeft % 60}";
         tocollect.text = $"To collect: {StaticClasses.toCollect}";
@@ -25,7 +27,13 @@ public class gameManager : MonoBehaviour
     }
 
     void blackout() {
-        Debug.Log("Blackout! Skill Issue!");
-        
+       // Debug.Log("Blackout! Skill Issue!");
+        SceneManager.LoadSceneAsync("Blackout");
+    }
+
+    void congrats()
+    {
+        // Debug.Log("Congratulations! Power is back")
+        SceneManager.LoadSceneAsync("Congratulations");
     }
 }
